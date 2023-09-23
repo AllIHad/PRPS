@@ -19,7 +19,7 @@ export default function LoginForm() {
 
     const handleSubmit = async (e: any) => {
         e.preventDefault()
-        
+
         console.log(user.username)
         console.log(user.password)
 
@@ -43,14 +43,16 @@ export default function LoginForm() {
                 onSubmit={handleSubmit}
                 className=''
             >
-                <label>User name</label>
+                <label>Username</label>
                 <input
+                    placeholder='username'
                     type="text"
                     id='username'
                     onChange={(e) => setUser({ ...user, username: e.target.value })}
                     value={user.username} />
-                <label >password </label>
+                <label >Password </label>
                 <input
+                    placeholder='password'
                     type="password"
                     id='password'
                     value={user.password}
