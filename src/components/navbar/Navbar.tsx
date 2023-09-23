@@ -1,7 +1,28 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
+import toast from "react-hot-toast"
+import axios from "axios"
+import { useRouter } from 'next/navigation'
 
 function Navbar() {
+
+  const router = useRouter()
+
+  const handleLogout = async () => {
+    try {
+      await axios.get('/api/users/logout')
+      toast.success('Logged out successfully!')
+      router.push('/')
+
+    } catch (error: any) {
+
+      console.log(error.message)
+      toast.error(error.message)
+    }
+  }
+
   return (
     <div className=" shadow-md bg-white">
       <div className="flex justify-between items-center h-[70px] max-w-[1240px] m-auto">
@@ -12,7 +33,7 @@ function Navbar() {
           <Link href='/progress/sempro'>Progress Sempro</Link>
         </div>
         <div className="flex flex-1 items-center justify-end text font-bold ">
-          <span className="cursor-pointer hover:text-green-500 duration-500">Logout</span>
+          <span onClick={handleLogout} className="cursor-pointer hover:text-green-500 duration-500">Logout</span>
         </div>
       </div>
     </div>
