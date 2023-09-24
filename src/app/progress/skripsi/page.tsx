@@ -9,15 +9,15 @@ function page() {
     const data = null
     return (
         <main className='min-h-screen'>
-            <div className='max-w-[1240px] m-auto'>
-                <div className=' py-5 border-b border-gray-300'>
+            <div className='max-w-[1240px] m-auto px-5 xl:px-0'>
+                <div className=' py-5 border-b border-gray-300 flex lg:justify-normal justify-center'>
                     <h3 className='font-medium text-2xl '>Progress Skripsi</h3>
                 </div>
-                <div className='mt-7 p-3 bg-[#e9ecef]'>
+                <div className='mt-7 p-3 bg-[#e9ecef] flex lg:justify-normal justify-center'>
                     <span className='font-semibold'>Riwayat</span>
                 </div>
-                <div className='my-1 p-3'>
-                    <Link className=' text-sm' href='/progress/sempro/create'>+ Tambah</Link>
+                <div className='my-1 p-3 flex lg:justify-normal justify-center'>
+                    <Link className=' text-sm' href='/progress/skripsi/create'>+ Tambah</Link>
                 </div>
 
                 <ul className='grid grid-cols-3 '>
