@@ -10,7 +10,7 @@ import React from "react"
 function Navbar() {
 
   const router = useRouter()
-  const [data,setData] = React.useState()
+  // const [data,setData] = React.useState()
 
   const handleLogout = async () => {
     try {
@@ -23,12 +23,12 @@ function Navbar() {
     }
   }
 
-  const getUserDetails = async () => {
-      const res = await axios.get('/api/users/me')
-      setData(res.data.data.name) 
-  }
+  // const getUserDetails = async () => {
+  //     const res = await axios.get('/api/users/me')
+  //     setData(res.data.data.name) 
+  // }
 
-  getUserDetails ()
+  // getUserDetails ()
 
   return (
     <div className=" shadow-md bg-white">
@@ -40,9 +40,9 @@ function Navbar() {
           <Link href='/progress/sempro'>Progress Sempro</Link>
         </div>
         <div className="flex flex-1 items-center justify-end text font-bold gap-6 ">
-          {data && (
+          {/* {data && (
             <Link href={`/progress/profile/${data}`} >{data}</Link>
-          )}
+          )} */}
           <span onClick={handleLogout} className="cursor-pointer hover:text-green-500 duration-500">Logout</span>
         </div>
       </div>
