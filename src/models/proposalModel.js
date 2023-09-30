@@ -10,7 +10,7 @@ const proposalSchema = new mongoose.Schema({
         required: true
     },
     presentaseProposal: {
-        type: Number,
+        type: String,
         required: true
     },
     keterangan: {
