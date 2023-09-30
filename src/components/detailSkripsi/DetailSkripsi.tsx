@@ -31,7 +31,7 @@ export default function DetailSkripsi() {
           </Card>
         </Link>
       )) :
-        <p className="my-10 text-center font-light text-red-400">Pls buat baru Progress dengan menekan tombol <span className="font-medium">+ Tambah</span> di atas</p>
+        <p className="my-10 text-center font-light text-red-400">Diharapkan untuk membuat progress baru dengan menekan tombol <span className="font-medium">+ Tambah</span> di atas</p>
       }
     </>
   )
