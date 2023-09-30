@@ -6,11 +6,8 @@
     @apply p-0 m-0 box-border;
 }
 
-body{
-    @apply max-w-full bg-[#f4f6f9] ;
-}
-
-a:hover{
+a:hover,
+a:visited{
     @apply hover:text-green-500 duration-500;
 }
 

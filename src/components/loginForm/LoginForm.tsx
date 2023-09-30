@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import toast from 'react-hot-toast'
 import axios from "axios";
 import { Input } from '@nextui-org/react'
+import {Button} from "@nextui-org/react";
 
 export default function LoginForm() {
 
@@ -38,10 +39,9 @@ export default function LoginForm() {
         <>
           
             <form
-                onSubmit={handleSubmit}
                 className='block'
             >
-                  <h2 className='text-center font-semibold text-lg'>Login</h2>
+                  <h2 className='text-center font-bold text-3xl'>LOGIN PRPS</h2>
                 <Input
                     type="text"
                     label="User Name"
@@ -58,7 +58,10 @@ export default function LoginForm() {
                     value={user.password}
                     onChange={(e) => setUser({...user, password: e.target.value })}
                 />
-                <button className='flex px-3 py-2 justify-center bg-green-600 hover:bg-green-700 rounded-md text-white' type='submit'> {loading ? "Loading..." : "Masuk"}</button>
+            {loading ?  
+            <Button color='success' className='flex justify-center' isLoading >Loading</Button> 
+            : 
+            <Button className='flex justify-center text-white hover:bg-green-700' color='success' onClick={handleSubmit} >Masuk</Button> }
             </form>
         </>
     )
