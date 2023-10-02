@@ -20,47 +20,49 @@ export default function SingleDetailSkripsi({ id }: any) {
 
 
   return (
-    <Card className="max-w-[1240px] m-auto ">
-      <CardHeader className="flex gap-3">
-        <div className="flex flex-col">
-          <h2 className='text-xl '>{data.judul}</h2>
-          <p className="text-small text-default-500 font text-gre">{data.priode}</p>
-        </div>
-      </CardHeader>
-      <Divider />
-      <CardBody className='gap-5'>
-        <Progress
-          size="md"
-          radius="sm"
-          classNames={{
-            base: "max-w-full",
-            track: "drop-shadow-md border border-default",
-            indicator: "bg-gradient-to-r from-pink-200 to-yellow-200",
-            label: "tracking-wider font-medium text-default-800",
-            value: "text-",
-          }}
-          label="Skripsi progress"
-          value={data.presentaseSkripsi}
-          showValueLabel={true}
-        />
-        <Progress
-          size="md"
-          radius="sm"
-          classNames={{
-            base: "max-w-full",
-            track: "drop-shadow-md border border-default",
-            indicator: "bg-gradient-to-r from-pink-200 to-yellow-200",
-            label: "tracking-wider font-medium text-default-800",
-            value: "text-",
-          }}
-          label="Sistem progress"
-          value={data.presentaseSistem}
-          showValueLabel={true}
-        />
-        <p>Keterangan : </p>
-        <p>{data.keterangan}</p>
-      </CardBody>
-      <Divider />
-    </Card>
+    <section>
+      <Card className="max-w-[1240px] m-auto ">
+        <CardHeader className="flex gap-3">
+          <div className="flex flex-col">
+            <h2 className='text-xl '>{data.judul}</h2>
+            <p className="text-small text-default-500 font text-gre">{data.priode}</p>
+          </div>
+        </CardHeader>
+        <Divider />
+        <CardBody className='gap-5'>
+          <Progress
+            size="md"
+            radius="sm"
+            classNames={{
+              base: "max-w-full",
+              track: "drop-shadow-md border border-default",
+              indicator: "bg-gradient-to-r from-pink-200 to-yellow-200",
+              label: "tracking-wider font-medium text-default-800",
+              value: "text-",
+            }}
+            label="Skripsi progress"
+            value={data.presentaseSkripsi}
+            showValueLabel={true}
+          />
+          <Progress
+            size="md"
+            radius="sm"
+            classNames={{
+              base: "max-w-full",
+              track: "drop-shadow-md border border-default",
+              indicator: "bg-gradient-to-r from-pink-200 to-yellow-200",
+              label: "tracking-wider font-medium text-default-800",
+              value: "text-",
+            }}
+            label="Sistem progress"
+            value={data.presentaseSistem}
+            showValueLabel={true}
+          />
+          <p>Keterangan : </p>
+          <p>{data.keterangan}</p>
+        </CardBody>
+        <Divider />
+      </Card>
+    </section>
   )
 }

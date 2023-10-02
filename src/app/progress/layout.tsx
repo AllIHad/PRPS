@@ -1,5 +1,5 @@
 import Footer from "@/components/footer/Footer"
-import Navbar from "@/components/navbar/Navbar"
+import NavigationBar from "@/components/navbar/NavigationBar"
 
 
 export default function ProgressLayout({  
@@ -10,7 +10,7 @@ export default function ProgressLayout({
     return (
       <html lang="en">
         <body >
-          <Navbar />
+          <NavigationBar/>
             {children}
           <Footer />
           </body>  

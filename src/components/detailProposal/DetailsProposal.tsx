@@ -19,7 +19,7 @@ export default function DetailProposal() {
     }, []);
 
     return (
-        <>
+        <section>
         {data ? data.map((data) => (
           <Link href={`/progress/proposal/${data._id}`} key={data.id} >
             <Card className="hover:bg-slate-100 mt-5">
@@ -33,6 +33,6 @@ export default function DetailProposal() {
         )) :
           <p className="my-10 text-center font-light text-red-400">Pls buat baru Progress dengan menekan tombol <span className="font-medium">+ Tambah</span> di atas</p>
         }
-      </>
+      </section>
     )
 }

@@ -19,7 +19,7 @@ export default function DetailSkripsi() {
   }, []);
 
   return (
-    <>
+    <section>
       {data ? data.map((data) => (
         <Link href={'/progress/skripsi/' + data._id} key={data.id} >
           <Card className="hover:bg-slate-100 mt-5">
@@ -33,6 +33,6 @@ export default function DetailSkripsi() {
       )) :
         <p className="my-10 text-center font-light text-red-400">Diharapkan untuk membuat progress baru dengan menekan tombol <span className="font-medium">+ Tambah</span> di atas</p>
       }
-    </>
+    </section>
   )
 }

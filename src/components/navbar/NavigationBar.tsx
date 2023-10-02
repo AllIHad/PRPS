@@ -4,22 +4,23 @@ import Image from "next/image"
 import Link from "next/link"
 import toast from "react-hot-toast"
 import axios from "axios"
-import { useRouter, } from 'next/navigation'
+import { useRouter } from "next/navigation"
 import React, { useEffect }from "react"
 
-function Navbar() {
 
-  const router = useRouter()
+function NavigationBar() {
+
+  const router = useRouter() 
   const [data, setData] = React.useState()
 
   const handleLogout = async () => {
     try {
       await axios.get('/api/users/logout')
-      toast.success('Logged out successfully!')
+      toast.success('Logged out successfully')
       router.push('/')
 
     } catch (error: any) {
-      toast.error(error.response.message)
+      toast.error(error.message)
     }
   }
 
@@ -45,11 +46,11 @@ function Navbar() {
           {/* {data && (
             <Link href={`/progress/profile/${data}`} >{data}</Link>
           )} */}
-          <span onClick={handleLogout} className="cursor-pointer hover:text-green-500 duration-500">Logout</span>
+          <button onClick={handleLogout} className="cursor-pointer hover:text-green-500 duration-500">Logout</button>
         </div>
       </div>
     </div>
   )
 }
 
-export default Navbar
+export default NavigationBar

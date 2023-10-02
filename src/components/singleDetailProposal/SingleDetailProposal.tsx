@@ -18,7 +18,7 @@ export function SingleDetailProposal({ id }: any) {
   }, [id])
 
   return (
-    <>
+    <section>
       <Card className="max-w-[1240px] m-auto ">
         <CardHeader className="flex gap-3">
           <div className="flex flex-col">
@@ -47,6 +47,6 @@ export function SingleDetailProposal({ id }: any) {
         </CardBody>
         <Divider />
       </Card>
-    </>
+    </section>
   )
 }

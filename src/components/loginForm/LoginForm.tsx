@@ -28,15 +28,14 @@ export default function LoginForm() {
             toast.success("Login success");
             router.push("/progress/skripsi");
         } catch (error: any) {
-            console.log(error.response.data);
-            toast.error(error.response.message);
+            toast.error('Your username or password is incorrect');
         } finally {
             setLoading(false);
         }
     }
 
     return (
-        <>
+        <section>
           
             <form
                 className='block'
@@ -63,6 +62,6 @@ export default function LoginForm() {
             : 
             <Button className='flex justify-center text-white hover:bg-green-700' color='success' onClick={handleSubmit} >Masuk</Button> }
             </form>
-        </>
+        </section>
     )
 }
