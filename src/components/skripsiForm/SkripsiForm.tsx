@@ -23,9 +23,6 @@ export default function SkripsiForm() {
   const [loading, setLoading] = React.useState(false);
 
   const handleSubmit = async (e: any) => {
-
-  
-
     try {
 
       if(progress.judul.length === 0 || progress.priode.length === 0 || progress.keterangan.length === 0 || progress.presentaseSkripsi.length === 0 || progress.presentaseSistem.length === 0) {
